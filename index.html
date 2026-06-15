@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="styles.css" rel="stylesheet">
+		<title>Mortgage Calculator</title>
+	</head>
+	<body>
+		<header>
+			<h1>Calculate your Mortgage Payment</h1>
+		</header>
+		<div id="container">
+			<form action="javascript:void(0)" onsubmit="calculateMortgagePayment()">
+				<label for="principal">Principal:
+					<input type="number" name="principal" id="principal" min="0.01" step="0.01" required />
+				</label><br /><br />
+				<label for="yearly-rate">Yearly Rate:
+					<input type="number" name="yearly-rate" id="yearly-rate" min="0.01" step="0.01" required />%
+				</label><br /><br />
+				<label for="loan-term">Loan Term:
+					<select name="loan-term" id="loan-term">
+						<option value="180">15</option>
+						<option value="240">20</option>
+						<option value="360">30</option>
+					</select>
+				</label><br /><br />
+				<input type="submit" value="Calculate" />
+				<input type="reset" value="Clear Form" id="reset" />
+			</form>
+			<img src="home.png" alt="Home">
+		</div>
+		<h2 id="monthly-payment"></h2>
+		<footer>
+			<br /><a href="https://github.com/zhall4/project-two.git" target="_blank">View my Github for Project Two</a>
+		</footer>
+	</body>
+	<script src="main.js"></script>
+</html>
